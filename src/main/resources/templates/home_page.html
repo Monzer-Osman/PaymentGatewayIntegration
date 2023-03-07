@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Monzer Osman">
+    <title>Home Page</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/form-validation.css}" rel="stylesheet">
+    <style>
+        button {
+            width: 160px !important;
+            height: 80px;
+            border: 1px solid transparent;
+            border-radius: 15px;
+            background-color: #fe1792;
+        }
+        a {
+            width: fit-content !important;
+        }
+        button:hover {
+            background-color: rgb(225, 14, 88);
+        }
+    </style>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+      <main>
+        <div class="py-5 text-center">
+          <h2></h2>
+        </div>
+        <div class="row g-5 content-center">
+            <a href="http://localhost:8080/payments/payment-form"><button>Donate</button></a>
+        </div>
+      </main>
+    </div>
+    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/js/form-validation.js}"></script>
+  </body>
+</html>
