@@ -1,4 +1,4 @@
-package com.PaymentGateway.PaymentGateway.Payment;
+package com.PaymentGateway.Payment;
 
 import lombok.Data;
 
@@ -8,5 +8,4 @@ public class PaymentDto {
     String lastName;
     String email;
     String amount;
-
 }

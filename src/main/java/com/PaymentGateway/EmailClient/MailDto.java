@@ -1,4 +1,4 @@
-package com.PaymentGateway.PaymentGateway.EmailClient;
+package com.PaymentGateway.EmailClient;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

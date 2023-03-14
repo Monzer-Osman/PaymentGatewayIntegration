@@ -1,4 +1,4 @@
-package com.PaymentGateway.PaymentGateway.Payment;
+package com.PaymentGateway.Payment;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class UserDto {
-    public String fullName;
+    public String firstName;
+    public String lastName;
     public String email;
-    public Integer amount;
 }

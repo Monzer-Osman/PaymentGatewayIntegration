@@ -1,17 +1,13 @@
-package com.PaymentGateway.PaymentGateway.EmailClient;
-
-import lombok.AllArgsConstructor;
+package com.PaymentGateway.EmailClient;
 
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
-import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
+import lombok.AllArgsConstructor;
 
-
-@Data
-@Slf4j
 @Service
+@Slf4j
 @AllArgsConstructor
 public class EmailClientService{
 	private JavaMailSender mailSender;
@@ -20,7 +16,7 @@ public class EmailClientService{
 						  String subject,
 						  String body) {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setFrom("Team@MIS-Company");
+		message.setFrom("Team@M.I.S-Company");
 		message.setTo(email);
 		message.setSubject(subject);
 		message.setText(body);

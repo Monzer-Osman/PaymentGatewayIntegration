@@ -1,41 +1,82 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Monzer Osman">
-    <title>Home Page</title>
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
-    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
-    <link th:href="@{/css/form-validation.css}" rel="stylesheet">
-    <style>
-        button {
-            width: 160px !important;
-            height: 80px;
-            border: 1px solid transparent;
-            border-radius: 15px;
-            background-color: #fe1792;
-        }
-        a {
-            width: fit-content !important;
-        }
-        button:hover {
-            background-color: rgb(225, 14, 88);
-        }
-    </style>
-  </head>
-  <body class="bg-light">
-    <div class="container">
-      <main>
-        <div class="py-5 text-center">
-          <h2></h2>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Munther Osman">
+        <title>Home Page</title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/checkout/">
+        <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+        <link th:href="@{/css/form-validation.css}" rel="stylesheet">
+        <style>
+
+            .button-54 {
+              font-family: "Open Sans", sans-serif;
+              font-size: 16px;
+              letter-spacing: 2px;
+              text-decoration: none;
+              text-transform: uppercase;
+              color: #000;
+              cursor: pointer;
+              border: 3px solid;
+              padding: 0.25em 0.5em;
+              box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+              position: relative;
+              user-select: none;
+              -webkit-user-select: none;
+              touch-action: manipulation;
+            }
+
+            .button-54:active {
+              box-shadow: 0px 0px 0px 0px;
+              top: 5px;
+              left: 5px;
+            }
+
+            @media (min-width: 768px) {
+              .button-54 {
+                padding: 0.25em 0.75em;
+              }
+            }
+
+            html, body {
+              height: 100%;
+              background: #084298;
+            }
+
+            input {
+                width: 160px !important;
+                height: 48px;
+                border: 1px solid transparent;
+                border-radius: 40px;
+                background: linear-gradient(to right bottom, rgb(209, 35, 35), rgb(42, 97, 160));
+            }
+
+            a {
+                width: fit-content !important;
+            }
+
+            button:hover {
+              background: linear-gradient(to left top, rgb(209, 35, 35), rgb(42, 97, 160));
+            }
+
+            .container {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row g-5 content-center">
+                <a href="http://localhost:8080/payments/payment-form">
+                    <button class="button-54" role="button">Donate</button>
+                </a>
+            </div>
         </div>
-        <div class="row g-5 content-center">
-            <a href="http://localhost:8080/payments/payment-form"><button>Donate</button></a>
-        </div>
-      </main>
-    </div>
-    <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
-    <script th:src="@{/js/form-validation.js}"></script>
-  </body>
+        <script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+        <script th:src="@{/js/form-validation.js}"></script>
+    </body>
 </html>

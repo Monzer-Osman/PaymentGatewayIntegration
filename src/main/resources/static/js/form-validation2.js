@@ -1,9 +1,8 @@
 const emailForm = document.getElementById("email");
-
-const submitButton = document.getElementById("submit");
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
 const amount = document.getElementById("amount");
+const submitButton = document.getElementById("submit");
 
 const namePattern = /[A-Za-z]{3,}/
 const emailPattern = /[A-Za-z][A-Za-z0-9_.]{2,}@\w{2,}.\w{2,}/;
@@ -27,26 +26,20 @@ emailForm.addEventListener("blur", (event) => {
     validateInput(!emailPattern.test(emailForm.value), emailForm);
 });
 
-//nameOnCardForm.addEventListener("blur", (event) => {
-//    validateInput(!fullNamePattern.test(nameOnCardForm.value), nameOnCardForm);
-//});
-//
-//cardNumForm.addEventListener("blur", () => {
-//    validateInput(!(cardNumForm.value.length === 16) ||
-//    !numberPattern.test(cardNumForm.value) ||
-//    !isValidCardNumber, cardNumForm);
-//});
-//
-//expDateForm.addEventListener("blur", () => {
-//    validateInput(!expDatePattern.test(expDateForm.value), expDateForm);
-//});
-//
-//cvvForm.addEventListener("blur", () => {
-//    validateInput(!numberPattern.test(cvvForm.value) ||
-//     !(cvvForm.value.length === 3), cvvForm);
-//});
+submit.onclick = validateAllInputs;
 
-function validateInput(condition, field){
+function validateAllInputs(event) {
+     inputs = [emailForm, firstName, lastName, amount];
+     for(let i = 0; i < inputs.length; i++){
+        if(inputs[i].classList.contains("is-invalid")){
+            event.preventDefault();
+            return;
+        }
+     }
+     document.querySelector("form").action = `/payments/pay/${amount.value}`;
+}
+
+function validateInput(condition, field) {
     if(condition) {
         if(field.classList.contains("is-valid")){
             field.classList.remove("is-valid");
